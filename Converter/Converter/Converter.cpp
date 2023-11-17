@@ -19,6 +19,7 @@ int main()
     {
         degreesToRadians();
     }
+
     else if (userChoice == 'f')
     {
         celToFah();
