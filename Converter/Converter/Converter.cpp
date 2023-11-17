@@ -27,6 +27,11 @@ int main()
         centimetersToInches();
     }
 
+    else if (userChoice == 'C')
+    {
+        centimetersToInches();
+    }
+
     else if (userChoice == 'f')
     {
         celToFah();
@@ -131,5 +136,23 @@ void centimetersToInches()
 
     // Show result
     std::cout << "The inch equivelent is: " << inches << std::endl;
+
+}
+
+void LitersToGallons()
+{
+    float liters = 0.0f;
+    float gallons = 0.0f;
+    const float LITERS_TO_GALLONS = 4.546f; // divide
+
+    // Get Input
+    std::cout << "Enter the liters you want converted: ";
+    std::cin >> liters;
+
+    // Do the Calculation
+    gallons = liters / LITERS_TO_GALLONS;
+
+    // Show result
+    std::cout << "The gallons equivelent is: " << gallons << std::endl;
 
 }
