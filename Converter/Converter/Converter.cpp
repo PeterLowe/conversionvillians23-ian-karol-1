@@ -1,5 +1,5 @@
 // Date: 17 / 11 / 2023
-// Names: Ian Perez Bunuel - 
+// Names: Ian Perez Bunuel - Karol Loughlin
 
 #include <iostream>
 
