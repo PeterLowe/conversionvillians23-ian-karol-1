@@ -6,15 +6,15 @@
 char printMenu();
 
 // Converters (Ian)
-void radiansToDegrees();
+void degreesToRadians();
 
 int main()
 {
     char userChoice; // letter for user to pick conversion
     userChoice = printMenu(); // only print the menu once
-    if (userChoice == 'a')
+    if (userChoice == 'A')
     {
-        radiansToDegrees();
+        degreesToRadians();
     }
 
 	return 1;
@@ -42,18 +42,22 @@ char printMenu() // written by Ian / Karol
 
 
 
-void radiansToDegrees()
+void degreesToRadians()
 {
     // variables
     float radians = 0.0f;
     float degrees = 0.0f;
-    const double CONVERTER_RADIAS_DEGREES = 57.2957795;
+    const float CONVERTER_RADIAS_DEGREES = 57.2958f;
 
 
     // get input
     std::cout << "Enter the Radians you want converted: ";
-    std::cin >> radians;
+    std::cin >> degrees;
 
-    std::cout << CONVERTER_RADIAS_DEGREES;
+    // Calculate the degrees
+    radians = degrees / CONVERTER_RADIAS_DEGREES;
+
+    // Show Result
+    std::cout << "Radians: " << radians << std::endl;
 
 }
