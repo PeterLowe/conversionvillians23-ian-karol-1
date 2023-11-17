@@ -10,6 +10,7 @@ char printMenu();
 void celToFah();
 // Converters (Ian)
 void degreesToRadians();
+void centimetersToInches();
 
 int main()
 {
@@ -18,6 +19,11 @@ int main()
     if (userChoice == 'A')
     {
         degreesToRadians();
+    }
+
+    else if (userChoice == 'B')
+    {
+        centimetersToInches();
     }
 
     else if (userChoice == 'f')
@@ -71,7 +77,7 @@ void degreesToRadians()
     // variables
     float radians = 0.0f;
     float degrees = 0.0f;
-    const float CONVERTER_RADIAS_DEGREES = 57.2958f;
+    const float CONVERTER_RADIAS_DEGREES = 57.2958f; // divide
 
 
     // get input
@@ -82,6 +88,24 @@ void degreesToRadians()
     radians = degrees / CONVERTER_RADIAS_DEGREES;
 
     // Show Result
-    std::cout << "Radians: " << radians << std::endl;
+    std::cout << "The radian equivelent is: " << radians << std::endl;
+
+}
+
+void centimetersToInches()
+{
+    float centimeters = 0.0f;
+    float inches = 0.0f;
+    const float CM_TO_INCHES = 2.54f; // divide
+
+    // Get Input
+    std::cout << "Enter the centimeters you want converted: ";
+    std::cin >> centimeters;
+
+    // Do the Calculation
+    inches = centimeters / CM_TO_INCHES;
+
+    // Show result
+    std::cout << "The inch equivelent is: " << inches << std::endl;
 
 }
