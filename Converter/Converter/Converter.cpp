@@ -9,6 +9,7 @@ char printMenu();
 //Converters - (Karol)
 void celToFah();
 void stAndLbToKg();
+void LitersToGallons();
 // Converters (Ian)
 void degreesToRadians();
 void centimetersToInches();
@@ -29,7 +30,7 @@ int main()
 
     else if (userChoice == 'C')
     {
-        centimetersToInches();
+        LitersToGallons();
     }
 
     else if (userChoice == 'f')
