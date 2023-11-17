@@ -8,6 +8,7 @@ char printMenu();
 
 //Converters - (Karol)
 void celToFah();
+void stAndLbToKg();
 // Converters (Ian)
 void degreesToRadians();
 
@@ -23,7 +24,10 @@ int main()
     {
         celToFah();
     }
-
+    else if (userChoice == 'e')
+    {
+        stAndLbToKg();
+    }
 	return 1;
 }
 
@@ -59,6 +63,26 @@ void celToFah()
     cel = (5 / 9.0f) * (fah - 32);
 
     std::cout << cel;
+
+}
+
+void stAndLbToKg()
+{
+    // variables
+    float stone = 0.0f;
+    float pounds = 0.0f;
+    float total = 0.0f;
+    float kilos = 0.0f;
+
+    // get user input 
+    std::cout << "Enter the weight in stone without pounds you want to convert : ";
+    std::cin >> stone;
+    std::cout << "Enter any remaining pounds you want to convert : ";
+    std::cin >> pounds;
+    
+    total = (stone * 6.35029) + (pounds * 0.4356);
+
+    std::cout << total << " kilograms";
 
 }
 
